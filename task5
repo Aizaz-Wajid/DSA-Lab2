@@ -1,0 +1,47 @@
+
+#include <iostream>
+#include <cstring>
+#include <cassert>
+
+using namespace std;
+bool isSorted(const int* arr, const int size) { 
+}
+
+void testSortedArray() {
+    int arr[] = { 1,2,3,4,5 };
+    bool result = isSorted(arr, 5);
+    assert(result == true);
+}
+void testUnsortedArray() {
+    int arr[] = { 1,5,2,4,5,3 };
+    bool result = isSorted(arr, 6);
+    assert(result == false);
+
+}
+void testDuplicateValues() {
+    int arr[] = { 1,2,2,3,4,5 };
+    bool result = isSorted(arr, 6);
+    assert(result == true);
+}
+void testSingleElement() {
+    int arr[] = { 1 };
+    bool result = isSorted(arr, 1);
+    assert(result == true);
+}
+void DescendingArray() {
+    int arr[] = {5,4,3,2,1 };
+    bool result = isSorted(arr, 5);
+    assert(result == false);
+}
+void testNegativeValuesArray() {
+    int arr[] = { -1,2,-3,4,5 };
+    bool result = isSorted(arr, 5);
+    assert(result == false);
+}
+void testallequal() {
+    int arr[] = {2,2,2,2,2};
+    bool result = isSorted(arr, 5);
+    assert(result == true);
+}
+int main() { 
+  return 0; }
